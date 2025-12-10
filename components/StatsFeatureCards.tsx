@@ -23,7 +23,7 @@ const CARDS: Card[] = [
     icon: <FiCheckCircle />,
     title: "Zrealizowane projekty",
     desc: "Projekty od briefu po finalny export.",
-    value: 150,
+    value: 89,
     prefix: "+",
     duration: 2,
   },

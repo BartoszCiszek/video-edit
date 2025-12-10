@@ -20,37 +20,37 @@ const SERVICES: Service[] = [
   {
     id: "s1",
     title: "Montaż Dynamiczny (Vlog/YouTube)",
-    desc: "Szybkie cięcia, efekty przejść, napisy, memy. Utrzymanie uwagi widza od pierwszej do ostatniej sekundy. Idealne pod retention.",
+    desc: "Krótka forma cięta pod algorytm. Flow, rytm i storytelling, który trzyma widza do samego końca. Memy, pacing, captions i efekty — wszystko po coś. Zero pustych przebitek. Retention robi robotę.",
     icon: <FiScissors />,
   },
   {
     id: "s2",
     title: "Reklamy & Social Media (Shorts/Reels)",
-    desc: "Formaty pionowe (9:16) i kwadratowe. Krótkie, treściwe formy reklamowe z mocnym CTA, zoptymalizowane pod algorytmy TikToka i IG.",
+    desc: "Formaty 9:16 robione pod wynik, nie pod sztukę. Mocny pierwszy sekundowy hook, wyraźny CTA, rytm dopasowany do algorytmów TikToka/Instagrama. Treści, które zatrzymują i konwertują.",
     icon: <FiFilm />,
   },
   {
     id: "s3",
     title: "Color Grading & Korekcja",
-    desc: "Nadawanie filmowego looku. Poprawa balansu bieli, ekspozycji i tworzenie unikalnego klimatu za pomocą LUT-ów i ręcznej korekcji.",
+    desc: "Filmowy look dopasowany do historii. Od czyszczenia balansu i ekspozycji po budowanie nastroju za pomocą LUT-ów i ręcznej kolorki. Każda scena wygląda jak część większej opowieści.",
     icon: <FiMonitor />,
   },
   {
     id: "s4",
     title: "Sound Design & Mix Audio",
-    desc: "Dobór muzyki, efekty dźwiękowe (SFX), czyszczenie dialogów. Dźwięk to 50% sukcesu wideo.",
+    desc: "Muzyka, SFX i dialogi doprowadzone do czystości. Buduję emocje dźwiękiem — od subtelnych detali po pełny, kinowy charakter. Dźwięk to 50% efektu końcowego, więc nie idę na skróty.",
     icon: <FiVolume2 />,
   },
   {
     id: "s5",
     title: "Animacje & Motion Graphics",
-    desc: "Animacje 3D, intro/outro, animowane napisy (kinetyczna typografia), paski dolne.",
+    desc: "Intro/outro, 3D, kinetic typography, paski dolne — wszystko dopasowane do charakteru marki. Animacje, które wyglądają jak naturalna część historii, a nie wrzucony efekt.",
     icon: <FiLayers />,
   },
   {
     id: "s6",
     title: "Konsultacje & Strategia Wideo",
-    desc: "Pomoc w doborze sprzętu, pomysły na content, analiza Twoich obecnych materiałów i plan naprawczy.",
+    desc: "Pomagam poukładać content tak, żeby zaczął robić wyniki. Analiza Twoich materiałów, wskazanie błędów, plan na poprawę jakości i spójność wizualną. Konkrety, nie lanie wody.",
     icon: <FiActivity />,
   },
 ];

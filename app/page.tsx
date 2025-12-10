@@ -17,33 +17,37 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="min-h-screen bg-black text-white">
-      {/* Header */}
-      <header className="header-compact sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/5">
-        <div className="container-max flex items-center justify-between">
-          <div className="h-8">
-            <span className="h1 neon text-2xl">VideoEdit</span>
-          </div>
-
-          <nav className="site-nav text-sm opacity-80 hidden md:block">
-            <ul className="flex gap-6">
-              <li><a href="#home" className="hover:text-cyan-400 transition">Home</a></li>
-              <li><a href="#about" className="hover:text-cyan-400 transition">O mnie</a></li>
-              <li><a href="#services" className="hover:text-cyan-400 transition">Usługi</a></li>
-              <li><a href="#partners" className="hover:text-cyan-400 transition">Współpraca</a></li>
-              <li><a href="#work" className="hover:text-cyan-400 transition">Portfolio</a></li>
-              <li><a href="#contact" className="hover:text-cyan-400 transition">Kontakt</a></li>
-            </ul>
-          </nav>
+      {/* HERO Z WIDEO W TLE */}
+      <section id="home" className="section relative overflow-hidden min-h-[85vh] flex items-center">
+        
+        {/* 1. BACKGROUND VIDEO */}
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            {/* Pamiętaj, aby wgrać plik hero.mp4 do folderu /public */}
+            <source src="/hero.mp4" type="video/mp4" />
+          </video>
+          
+          {/* Overlay - przyciemnienie wideo dla czytelności tekstu */}
+          <div className="absolute inset-0 bg-black/70" />
+          {/* Gradient od dołu, żeby ładnie przechodził w kolejną sekcję */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30" />
         </div>
-      </header>
 
-      {/* HERO */}
-      <section id="home" className="section pt-32 pb-20 overflow-hidden relative">
-        <div className="container-max hero-grid relative z-10">
+        {/* 2. TREŚĆ HERO (musi być relatywna i mieć z-10) */}
+        <div className="container-max hero-grid relative z-10 w-full">
           <div>
             <HeroClient />
           </div>
 
+          {/* Opcjonalnie: Zdjęcie po prawej. 
+              Jeśli wolisz "czysty" styl jak u Dawida (samo wideo), możesz usunąć ten div poniżej.
+              Zostawiłem go, bo fajnie wygląda jako "profilówka" nad wideo. */}
           <div className="relative hidden md:block">
             <div className="card p-4 neon-card rotate-3 hover:rotate-0 transition-transform duration-500" style={{ width: 360 }}>
               <div className="w-full h-56 md:h-96 bg-neutral-900 rounded-lg overflow-hidden relative">
@@ -66,11 +70,11 @@ export default function Page() {
         <div className="container-max grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1 relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-cyan-400 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
-            <div className="w-full h-80 md:h-[500px] card p-0 overflow-hidden rounded-xl relative">
+            <div className="w-full h-80 md:h-[600px] card p-0 overflow-hidden rounded-xl relative">
               <Image 
                 src="/bartek.webp" 
                 alt="Bartek" 
-                width={1200} 
+                width={1000} 
                 height={1200} 
                 className="object-cover w-full h-full" 
               />
@@ -141,11 +145,9 @@ export default function Page() {
 
       {/* 7) CTA contact */}
       <section id="contact" className="section py-32 relative overflow-hidden">
-        {/* Ozdobne tło tylko dla tej sekcji */}
         <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/20 to-black pointer-events-none" />
 
         <div className="container-max text-center relative z-10">
-          {/* POPRAWIONY NAGŁÓWEK: font-sans, tracking-tighter, uppercase */}
           <h3 className="text-4xl md:text-6xl font-black mb-8 leading-[0.9] tracking-tighter font-sans uppercase">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500">
               Zróbmy razem hałas.

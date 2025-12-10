@@ -15,10 +15,10 @@ const partners = [
     ig: 4000000 
   },
   { 
-    name: "WERSOW", 
+    name: "Nicole Węcławiak", 
     img: "/nicole.webp", 
-    yt: 2670000, 
-    ig: 3600000 
+    yt: 959216, 
+    ig: 416672 
   },
   { 
     name: "PATEC", 
