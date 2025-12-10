@@ -1,4 +1,3 @@
-// /app/page.tsx
 import React from "react";
 import Image from "next/image";
 import HeroClient from "../components/HeroClient";
@@ -6,7 +5,7 @@ import PartnersCarousel from "../components/PartnersCarousel";
 import StatsFeatureCards from "../components/StatsFeatureCards";
 import WorkGallery from "../components/WorkGallery";
 import WhySection from "../components/WhySection";
-import ServicesSection from "../components/ServicesSection"; // <--- IMPORTUJEMY TUTAJ
+import ServicesSection from "../components/ServicesSection";
 import { FaInstagram, FaYoutube, FaTiktok, FaEnvelope } from "react-icons/fa";
 
 export const metadata = {
@@ -78,23 +77,23 @@ export default function Page() {
           </div>
 
           <div className="order-1 md:order-2">
-            <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight font-display">
+            <h2 className="text-4xl md:text-6xl font-black mb-6 leading-[0.9] tracking-tighter font-sans">
               CZEŚĆ! <br/> JESTEM <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">BARTOSZ</span>
             </h2>
-            <p className="lead text-lg text-gray-300 mb-6">
+            <p className="lead text-lg text-gray-300 mb-6 font-medium">
               Kocham robić wielkie rzeczy! Zajmuję się montażem, kreacją contentu i prowadzeniem projektów video dla twórców i marek.
             </p>
-            <p className="text-gray-400 mb-8">
+            <p className="text-gray-400 mb-8 leading-relaxed">
               Moim celem jest nie tylko "pocięcie filmu", ale stworzenie historii, która zatrzyma widza przed ekranem.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 2) Czym się zajmuję - ZMIANA NA NOWY KOMPONENT */}
-      <ServicesSection />  {/* <--- TUTAJ JEST TERAZ NOWA SEKCJA */}
+      {/* 2) Czym się zajmuję */}
+      <ServicesSection />
 
-      {/* 3) Partners carousel */}
+      {/* 3) Partners */}
       <section id="partners" className="section py-20 bg-[#050505]">
         <div className="container-max">
           <div className="text-center mb-12">
@@ -141,7 +140,6 @@ export default function Page() {
 
       {/* 7) CTA contact */}
       <section id="contact" className="section py-32 relative overflow-hidden">
-        {/* Ozdobne tło tylko dla tej sekcji */}
         <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/20 to-black pointer-events-none" />
 
         <div className="container-max text-center relative z-10">

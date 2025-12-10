@@ -4,15 +4,17 @@
 import React from "react";
 import CountUp from "./CountUp";
 import { FiCheckCircle, FiThumbsUp, FiPlay } from "react-icons/fi";
+import { IconBaseProps } from "react-icons"; // 1. Import typu
 import { motion } from "framer-motion";
 
 type Card = {
-  icon: React.ReactNode;
+  // 2. Zmiana typu: zamiast ogólnego ReactNode, konkretny element z propsami ikon
+  icon: React.ReactElement<IconBaseProps>;
   title: string;
   desc?: string;
   value: number;
-  prefix?: string; // Nowe pole na tekst przed liczbą
-  suffix?: string; // Pole na tekst po liczbie
+  prefix?: string;
+  suffix?: string;
   duration?: number;
 };
 
@@ -22,7 +24,7 @@ const CARDS: Card[] = [
     title: "Zrealizowane projekty",
     desc: "Projekty od briefu po finalny export.",
     value: 150,
-    prefix: "+", // Przeniesione na początek
+    prefix: "+",
     duration: 2,
   },
   {
@@ -30,15 +32,15 @@ const CARDS: Card[] = [
     title: "Zadowolenie klientów",
     desc: "Satysfakcja klienta przy każdym zleceniu.",
     value: 100,
-    suffix: "%", // Zostaje na końcu
+    suffix: "%",
     duration: 2,
   },
   {
     icon: <FiPlay />,
     title: "Wyświetlenia",
     desc: "Łączne wyświetlenia Twoich materiałów.",
-    value: 1000000,
-    prefix: "+", // Przeniesione na początek
+    value: 317444,
+    prefix: "+",
     duration: 2.5,
   },
 ];
@@ -67,7 +69,8 @@ export default function StatsFeatureCards() {
           >
             {/* Ikona */}
             <div className="mb-6 p-4 rounded-full bg-cyan-500/10 text-cyan-400 group-hover:scale-110 transition-transform duration-300">
-              {React.cloneElement(c.icon as React.ReactElement, { size: 32 })}
+              {/* 3. Teraz klonowanie jest bezpieczne i TypeScript nie zgłasza błędu o 'size' */}
+              {React.cloneElement(c.icon, { size: 32 })}
             </div>
 
             {/* Tytuł i Opis */}
@@ -80,7 +83,7 @@ export default function StatsFeatureCards() {
             <div className="mt-auto pt-4 border-t border-white/5 w-full">
               <span className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 tabular-nums inline-flex items-center justify-center">
                 
-                {/* PREFIX (np. +) */}
+                {/* PREFIX */}
                 {c.prefix && (
                   <span className="mr-2 text-3xl md:text-4xl text-purple-400 font-bold">
                     {c.prefix}
@@ -94,7 +97,7 @@ export default function StatsFeatureCards() {
                   className="inline-block" 
                 />
 
-                {/* SUFFIX (np. %) */}
+                {/* SUFFIX */}
                 {c.suffix && (
                   <span className="ml-1 text-3xl md:text-4xl text-purple-400 font-bold">
                     {c.suffix}
