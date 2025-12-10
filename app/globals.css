@@ -1,13 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: 'ObelixPro';
-  src: url('/fonts/ObelixPro.woff2') format('woff2');
-  font-weight: 200; /* lub bold, zależy jaki plik ściągnąłeś */
-  font-style: normal;
-  font-display: swap;
-}
-
 /* ========== THEME VARIABLES ========== */
 @theme {
   --font-sans: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;

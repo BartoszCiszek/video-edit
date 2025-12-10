@@ -9,7 +9,6 @@ export default function DynamicTitle() {
     "font-display",             // Syne (Twój główny)
     "font-['Montserrat']",      // Nowoczesny, czysty
     "font-['Oswald']",          // Wysoki, mocny (Fitness/Action)
-    "font-['ObelixPro']",       // Komiksowy/Gaming (wymaga pliku lokalnego)
   ];
   
   const [currentFontIndex, setCurrentFontIndex] = useState(0);
