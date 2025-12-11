@@ -39,7 +39,7 @@ const CARDS: Card[] = [
     icon: <FiPlay />,
     title: "Wyświetlenia",
     desc: "Łączne wyświetlenia materiałów.",
-    value: 651444,
+    value: 656444,
     prefix: "+",
     duration: 2.5,
   },

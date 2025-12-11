@@ -86,10 +86,10 @@ export default function PartnersCarousel() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: idx * 0.1 }}
-            className="flex-shrink-0 w-[280px] md:w-[320px] snap-center flex flex-col bg-[#0a0a0a] rounded-xl overflow-hidden shadow-2xl border border-white/5 hover:border-purple-500/30 transition-colors duration-300"
+            className="shrink-0 w-[280px] md:w-[320px] snap-center flex flex-col bg-[#0a0a0a] rounded-xl overflow-hidden shadow-2xl border border-white/5 hover:border-purple-500/30 transition-colors duration-300"
           >
             {/* ZDJĘCIE */}
-            <div className="relative w-full aspect-[4/5] overflow-hidden">
+            <div className="relative w-full aspect-4/5 overflow-hidden">
               <Image 
                 src={p.img} 
                 alt={p.name} 
@@ -97,7 +97,7 @@ export default function PartnersCarousel() {
                 className="object-cover hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent opacity-60" />
             </div>
 
             {/* FIOLETOWY PASEK */}
@@ -131,7 +131,7 @@ export default function PartnersCarousel() {
         ))}
         
         {/* Pusty element na końcu dla lepszego scrollowania na mobile */}
-        <div className="w-4 flex-shrink-0" />
+        <div className="w-4 shrink-0" />
       </div>
     </div>
   );

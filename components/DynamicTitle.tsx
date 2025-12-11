@@ -6,9 +6,7 @@ import React, { useState, useEffect } from "react";
 export default function DynamicTitle() {
   // Lista klas czcionek typowych dla YouTube/Montażu
   const fonts = [
-    "font-display",             // Syne (Twój główny)
     "font-['Montserrat']",      // Nowoczesny, czysty
-    "font-['Oswald']",          // Wysoki, mocny (Fitness/Action)
   ];
   
   const [currentFontIndex, setCurrentFontIndex] = useState(0);

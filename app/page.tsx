@@ -34,7 +34,7 @@ export default function Page() {
           </video>
           
           <div className="absolute inset-0 bg-black/70" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30" />
+          <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-black/30" />
         </div>
 
         {/* 2. TREŚĆ HERO */}
@@ -44,6 +44,18 @@ export default function Page() {
           </div>
 
           <div className="relative hidden md:block">
+            <div className="card p-4 neon-card rotate-3 hover:rotate-0 transition-transform duration-500" style={{ width: 360 }}>
+              <div className="w-full h-56 md:h-96 bg-neutral-900 rounded-lg overflow-hidden relative">
+                <Image 
+                  src="/logo.webp" 
+                  alt="Logo" 
+                  width={800} 
+                  height={1000} 
+                  className="object-cover w-full h-full hover:scale-105 transition-transform duration-700" 
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -64,7 +76,7 @@ export default function Page() {
       <section id="about" className="section py-20 relative">
         <div className="container-max grid md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1 relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-cyan-400 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
+            <div className="absolute -inset-1 bg-linear-to-r from-purple-600 to-cyan-400 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-500"></div>
             <div className="w-full h-80 md:h-[600px] card p-0 overflow-hidden rounded-xl relative">
               <Image 
                 src="/bartek.webp" 
@@ -78,7 +90,7 @@ export default function Page() {
 
           <div className="order-1 md:order-2">
             <h2 className="text-4xl md:text-6xl font-black mb-6 leading-[0.9] tracking-tighter font-sans">
-              CZEŚĆ! <br/> JESTEM <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">BARTOSZ</span>
+              CZEŚĆ! <br/> JESTEM <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-purple-500">BARTEK</span>
             </h2>
             <p className="lead text-lg text-gray-300 mb-6 font-medium">
               Kocham robić wielkie rzeczy! Zajmuję się montażem, kreacją contentu i prowadzeniem projektów video dla twórców i marek.
@@ -140,11 +152,11 @@ export default function Page() {
 
       {/* 7) CTA contact */}
       <section id="contact" className="section py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/20 to-black pointer-events-none" />
+        <div className="absolute inset-0 bg-linear-to-t from-cyan-900/20 to-black pointer-events-none" />
 
         <div className="container-max text-center relative z-10">
           <h3 className="text-4xl md:text-6xl font-black mb-8 leading-[0.9] tracking-tighter font-sans uppercase">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-white via-gray-200 to-gray-500">
               Zróbmy razem hałas.
             </span>
           </h3>

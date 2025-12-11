@@ -4,9 +4,9 @@
 import React from "react";
 
 const items = [
-  { id: "yt1", src: "https://www.youtube.com/embed/dQw4w9WgXcQ", title: "Reklama dla X" },
-  { id: "ig1", src: "https://www.youtube.com/embed/dQw4w9WgXcQ", title: "Vlog z Y" },
-  { id: "tt1", src: "https://www.youtube.com/embed/dQw4w9WgXcQ", title: "Shorts Z" },
+  { id: "yt1", src: "https://www.youtube.com/embed/m9eO-5gCBtU", title: "Kanał Lexy - Testowy montaż w ramach aplikacji na montażystę do zespołu Lexy. Materiał niewykorzystany oficjalnie" },
+  { id: "yt2", src: "https://www.youtube.com/embed/zwzbvePCobk", title: "GRAMY W SIMSY! (nikt nie prosił, każdy potrzebował) 💚🖥️" },
+  { id: "yt3", src: "https://www.youtube.com/embed/dQw4w9WgXcQ", title: "Vlog z Y" },
 ];
 
 export default function WorkGallery() {
@@ -18,7 +18,7 @@ export default function WorkGallery() {
           className="group relative rounded-xl overflow-hidden border border-white/5 bg-neutral-900"
         >
           {/* Neon Glow on Hover */}
-          <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 opacity-0 group-hover:opacity-20 blur transition duration-500" />
+          <div className="absolute -inset-1 bg-linear-to-r from-cyan-500 to-purple-600 opacity-0 group-hover:opacity-20 blur transition duration-500" />
           
           <div className="relative" style={{ aspectRatio: "16/9" }}>
             <iframe 
